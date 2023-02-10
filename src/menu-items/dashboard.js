@@ -1,14 +1,13 @@
 // assets
-import { IconDashboard } from '@tabler/icons';
+import { IconDashboard, IconUsers } from '@tabler/icons';
 
 // constant
-const icons = { IconDashboard };
+const icons = { IconDashboard, IconUsers };
 
 // ==============================|| DASHBOARD MENU ITEMS ||============================== //
 
 const dashboard = {
     id: 'dashboard',
-    title: 'Dashboard',
     type: 'group',
     children: [
         {
@@ -18,6 +17,22 @@ const dashboard = {
             url: '/dashboard/default',
             icon: icons.IconDashboard,
             breadcrumbs: false
+        },
+        {
+            id: 'users',
+            title: 'Add User',
+            type: 'item',
+            url: '/dashboard/user',
+            icon: icons.IconUsers,
+            breadcrumbs: false
+        },
+        {
+            id: 'project',
+            title: 'Add Project',
+            type: 'item',
+            url: '/dashboard/project',
+            icon: icons.IconUsers,
+            breadcrumbs: true
         }
     ]
 };
